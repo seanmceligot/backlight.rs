@@ -14,7 +14,7 @@ fn show_brightness(pcnt: i32) {
         71..=80 => '',
         81..=90 => '',
         91..=99 => '',
-        100 => '',                      // Assume '' is the icon for 89% to 100%
+        100 => '',                        // Assume '' is the icon for 89% to 100%
         _ => panic!("Invalid percentage"), // This should never happen if percentages are between 0 and 100
     };
     println!("{} {}%", icon, pcnt);
