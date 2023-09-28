@@ -100,14 +100,13 @@ fn main() -> io::Result<()> {
 }
 fn calc_new_pcnt(current_pcnt: i32, increment: i32) -> i32 {
     let new_pcnt = current_pcnt + increment;
-    let new_pcnt = if new_pcnt < 0 {
+    if new_pcnt < 0 {
         0
     } else if new_pcnt > 100 {
         100
     } else {
         new_pcnt
-    };
-    new_pcnt
+    }
 }
 #[test]
 fn test() {
